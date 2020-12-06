@@ -1,0 +1,118 @@
+--ALL COMMANDS USED WITH EXPLANATIONS
+ 
+--do these commands from sql editor before transferring to linux fs
+ 
+--remove columns
+alter table May2015
+drop column created_utc, link_id, score_hidden, author_flair_css_class, author_flair_text,
+removal_reason, archived, retrieved_on, edited, controversiality, parent_id;
+ 
+ 
+--remove non default subreddits excluding announcements
+delete from May2015
+where not subreddit='Art'
+and not subreddit='AskReddit'
+and not subreddit='askscience'
+and not subreddit='aww'
+and not subreddit='blog'
+and not subreddit='books'
+and not subreddit='creepy'
+and not subreddit='dataisbeautiful'
+and not subreddit='DIY'
+and not subreddit='Documentaries'
+and not subreddit='EarthPorn'
+and not subreddit='explainlikeimfive'
+and not subreddit='food'
+and not subreddit='funny'
+and not subreddit='Futurology'
+and not subreddit='gadgets'
+and not subreddit='gaming'
+and not subreddit='GetMotivated'
+and not subreddit='gifs'
+and not subreddit='history'
+and not subreddit='IAmA'
+and not subreddit='InternetIsBeautiful'
+and not subreddit='Jokes'
+and not subreddit='LifeProTips'
+and not subreddit='listentothis'
+and not subreddit='mildlyinteresting'
+and not subreddit='movies'
+and not subreddit='Music'
+and not subreddit='news'
+and not subreddit='nosleep'
+and not subreddit='nottheonion'
+and not subreddit='OldSchoolCool'
+and not subreddit='personalfinance'
+and not subreddit='philosophy'
+and not subreddit='photoshopbattles'
+and not subreddit='pics'
+and not subreddit='science'
+and not subreddit='Showerthoughts'
+and not subreddit='space'
+and not subreddit='sports'
+and not subreddit='television'
+and not subreddit='tifu'
+and not subreddit='todayilearned'
+and not subreddit='UpliftingNews'
+and not subreddit='videos'
+and not subreddit='worldnews';
+ 
+ 
+--check count should be 46
+select count(distinct subreddit) from May2015;
+ 
+ 
+--optional double check
+select distinct subreddit from May2015;
+ 
+ 
+--remove all rows where comment body is [deleted]
+delete from May2015 where body='[deleted]';
+ 
+ 
+ 
+--upload file to linux server
+scp may_2015_trim.csv dkang10@129.150.64.74:/home/dkang10
+ 
+ 
+--create hdfs directory
+hdfs dfs -mkdir group3
+hdfs dfs -mkdir group3/dataset
+ 
+--check directory was made
+hdfs dfs -ls group3
+ 
+--put file in hdfs
+hdfs dfs -put may_2015_trim.csv group3/dataset
+ 
+--check file in hdfs
+hdfs dfs -ls group3/dataset
+ 
+--change permissions of new directory
+hdfs dfs -chmod -R o+w .
+ 
+ 
+--create table from csv file in hdfs
+create table reddit_may_2015 (
+    id string,
+    subreddit_id string,
+    subreddit string,
+    name string,
+    author string,
+    ups int,
+    downs int,
+    score int,
+    gilted int,
+    distinguished string,
+    body string
+)
+row format delimited
+fields terminated by '|'
+lines terminated by '\n'
+location '/user/dkang10/group3/dataset'
+tblproperties('skip.header.line.count'='1');
+ 
+--check new table
+show tables;
+describe reddit_may_2015;
+select count(*) from reddit_may_2015;
