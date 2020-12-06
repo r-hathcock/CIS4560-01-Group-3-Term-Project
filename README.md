@@ -1,1 +1,4 @@
-# CIS4560-01_Grp03_TermProject
+# Analyzing Reddit Data
+# CIS 4560-01
+# Professor Jongwook Woo
+# Group 3: 
