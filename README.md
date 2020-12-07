@@ -2,7 +2,7 @@
 **Term Project Presentation**  
 **CIS 4560-01**  
 **Professor Jongwook Woo**  
-**Group 3: Ryan Hathcock, Michael Kintanar, Danny Xie, Daniel Kang, Klayton Trinh**   
+**Group 3:  Daniel Kang, Danny Xie,K layton Trinh, Michael Kintanar, Ryan Hathcock**   
 ##
 
 &nbsp;  
@@ -17,3 +17,7 @@ To analyze Reddit comment data from May 2015 to find common trends.
 The dataset we used is from [Dataset - May 2015 Reddit Comments](https://www.kaggle.com/reddit/reddit-comments-may-2015).
 &nbsp;
 
+**Included Items**
+- Presentation Slides
+- Code used to store, clean, and analyze the data
+&nbsp;
