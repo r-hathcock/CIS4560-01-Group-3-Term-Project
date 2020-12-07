@@ -1,6 +1,6 @@
 # Analyzing Reddit Data
 **Term Project Presentation**  
-**CIS 4560-01**  
+**Introduction to Big Data CIS 4560-01**  
 **Professor Jongwook Woo**  
 **Group 3:** Daniel Kang, Danny Xie, Klayton Trinh, Michael Kintanar, Ryan Hathcock 
 ##
