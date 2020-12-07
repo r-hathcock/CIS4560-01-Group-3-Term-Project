@@ -2,7 +2,7 @@
 **Term Project Presentation**  
 **CIS 4560-01**  
 **Professor Jongwook Woo**  
-**Group 3:  Daniel Kang, Danny Xie,K layton Trinh, Michael Kintanar, Ryan Hathcock**   
+**Group 3:** Daniel Kang, Danny Xie, Klayton Trinh, Michael Kintanar, Ryan Hathcock 
 ##
 
 &nbsp;  
