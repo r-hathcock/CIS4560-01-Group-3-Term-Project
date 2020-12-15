@@ -17,7 +17,7 @@ The dataset we used is from [Dataset - May 2015 Reddit Comments](https://www.kag
 
 **Included Items**
 - Reddit Data Analysis - Presentation.pdf: Our presentation slides
-- Reddit Data Analysis - Code.pdf: Readable pdf of the code we used.
+- Raw Commands: Readable pdf of the code we used.
 - commandsRawText.txt: Simple text of the code. Easier to copy/paste.
 &nbsp;
 
