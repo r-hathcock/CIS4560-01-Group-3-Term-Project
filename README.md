@@ -13,6 +13,7 @@ To analyze Reddit comment data from May 2015 to find common trends.
 
 **Data**   
 The dataset we used is from [Dataset - May 2015 Reddit Comments](https://www.kaggle.com/reddit/reddit-comments-may-2015).
+After cleansing and filtering the original dataset, the compressed version can be found [here](https://cis4560g3.s3-us-west-2.amazonaws.com/may2015all.zip).
 &nbsp;
 
 **Included Items**
