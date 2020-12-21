@@ -17,12 +17,9 @@ After cleansing and filtering the original dataset, the compressed version can b
 &nbsp;
 
 **Included Items**
+- CIS 4560-01 Group 3 Term Paper.docx.pdf: Final term paper
+- Group 3 Lab Tutorial.docx.pdf: A detailed tutorial on how we used Hadoop, Hive, and SQLite to retrieve, clean, store, and analyze this data set.
 - Reddit Data Analysis - Presentation.pdf: Our presentation slides
-- Raw Commands: Readable pdf of the code we used.
+- Raw Commands.pdf: Readable pdf of the code we used.
 - commandsRawText.txt: Simple text of the code. Easier to copy/paste.
-&nbsp;
-
-**More to Come (12/20)**
-- A detailed tutorial on how we used Hadoop, Hive, and SQLite to retrieve, clean, store, and analyze this data set.
-- Final term paper
 &nbsp;
